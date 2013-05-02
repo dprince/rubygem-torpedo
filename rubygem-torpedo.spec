@@ -15,6 +15,7 @@ Requires: ruby
 Requires: rubygem(thor) => 0.14.6
 Requires: rubygem(fog)
 Requires: rubygem(net-ssh) >= 2.2.0
+Requires: rubygem(test-unit)
 BuildRequires: ruby(abi) = %{rubyabi}
 BuildRequires: rubygems-devel 
 BuildRequires: ruby 
