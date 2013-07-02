@@ -1,5 +1,9 @@
 %global gem_name torpedo
 %global rubyabi 1.8
+%global gem_dir %(ruby -rubygems -e 'puts Gem::dir' 2>/dev/null)
+%global gem_instdir %{gem_dir}/gems/%{gem_name}-%{version}
+%global gem_libdir %{gem_instdir}/lib
+%global gem_docdir %{gem_dir}/doc/%{gem_name}-%{version}
 
 Summary: Fire when ready. Fast Ruby integration tests for OpenStack
 Name: rubygem-%{gem_name}
@@ -55,9 +59,8 @@ find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 %{gem_instdir}/README.md
 %{gem_instdir}/LICENSE.txt
 %{gem_libdir}
-%exclude %{gem_cache}
-%exclude /usr/share/gems/bin/ruby_noexec_wrapper
-%{gem_spec}
+%{gem_dir}/cache/%{gem_name}-%{version}.gem
+%{gem_dir}/specifications/%{gem_name}-%{version}.gemspec
 
 %changelog
 * Wed May 01 2013 Dan Prince - 1.0.19-1
