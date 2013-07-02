@@ -1,5 +1,5 @@
 %global gem_name torpedo
-%global rubyabi 1.9.1
+%global rubyabi 1.8
 
 Summary: Fire when ready. Fast Ruby integration tests for OpenStack
 Name: rubygem-%{gem_name}
