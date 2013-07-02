@@ -17,7 +17,7 @@ Requires: rubygem(fog)
 Requires: rubygem(net-ssh) >= 2.2.0
 Requires: rubygem(test-unit)
 BuildRequires: ruby(abi) = %{rubyabi}
-BuildRequires: rubygems-devel 
+#BuildRequires: rubygems-devel 
 BuildRequires: ruby 
 BuildArch: noarch
 Provides: rubygem(%{gem_name}) = %{version}
