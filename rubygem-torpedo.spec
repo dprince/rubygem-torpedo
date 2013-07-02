@@ -49,6 +49,8 @@ cp -a .%{_bindir}/* \
 
 find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 
+sed -e 's|.*s\.add.*dependency.*||g' -i %{buildroot}%{gem_dir}/specifications/%{gem_name}-%{version}.gemspec
+
 
 %files
 %dir %{gem_instdir}
