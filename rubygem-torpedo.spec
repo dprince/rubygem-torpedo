@@ -58,10 +58,21 @@ sed -e 's|.*s\.add.*dependency.*||g' -i %{buildroot}%{gem_dir}/specifications/%{
 %{gem_instdir}/bin
 %{gem_instdir}/README.md
 %{gem_instdir}/LICENSE.txt
+%{gem_instdir}/VERSION
+%{gem_instdir}/CHANGELOG
+%exclude %{gem_instdir}/.document
+%exclude %{gem_instdir}/Gemfile
+%exclude %{gem_instdir}/Gemfile.lock
+%exclude %{gem_instdir}/Rakefile
+%exclude %{gem_instdir}/test/helper.rb
+%exclude %{gem_instdir}/torpedo.gemspec
 %{gem_libdir}
 %{gem_dir}/cache/%{gem_name}-%{version}.gem
 %{gem_dir}/specifications/%{gem_name}-%{version}.gemspec
 
 %changelog
+* Fri Aug 02 2013 Dan Prince - 2.1.0-1
+- Add support for volumes.
+
 * Wed May 01 2013 Dan Prince - 1.0.19-1
 - Initial package
