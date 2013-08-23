@@ -1,5 +1,5 @@
 %global gem_name torpedo
-%global rubyabi 1.9.1
+#%global rubyabi 1.9.1
 
 Summary: Fire when ready. Fast Ruby integration tests for OpenStack
 Name: rubygem-%{gem_name}
@@ -9,14 +9,14 @@ Group: Development/Languages
 License: MIT
 URL: http://github.com/dprince/torpedo
 Source0: %{gem_name}-%{version}.gem
-Requires: ruby(abi) = %{rubyabi}
+#Requires: ruby(abi) = %{rubyabi}
 Requires: ruby(rubygems) 
 Requires: ruby 
 Requires: rubygem(thor) => 0.14.6
 Requires: rubygem(fog)
 Requires: rubygem(net-ssh) >= 2.2.0
 Requires: rubygem(test-unit)
-BuildRequires: ruby(abi) = %{rubyabi}
+#BuildRequires: ruby(abi) = %{rubyabi}
 BuildRequires: rubygems-devel 
 BuildRequires: ruby 
 BuildArch: noarch
@@ -68,6 +68,9 @@ find %{buildroot}%{gem_instdir}/bin -type f | xargs chmod a+x
 %{gem_spec}
 
 %changelog
+* Fri Aug 23 2013 Dan Prince - 2.1.0-1
+- Updates to build on Fedora 19.
+
 * Fri Aug 02 2013 Dan Prince - 2.1.0-1
 - Add support for volume testing.
 
